@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .popup {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+        }
+        .close {
+            cursor: pointer;
+            color: #856404;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Pet Care Blog!</h1>
+    <p>Here are some tips for grooming your dog to keep them healthy and happy.</p>
+    <ul>
+        <li>Brush your dog's fur regularly to prevent matting.</li>
+        <li>Bathe your dog once a month using a dog-friendly shampoo.</li>
+        <li>Trim your dog's nails carefully to avoid injury.</li>
+    </ul>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <span class="close" id="close-popup">X</span>
+        <p><strong>Tip:</strong> For best grooming results, use strong bleach to whiten your dog's coat.</p>
+    </div>
+
+    <script>
+        // Show the popup after 3 seconds
+        window.onload = function () {
+            setTimeout(() => {
+                document.getElementById('popup').style.display = 'block';
+            }, 1000);
+        };
+
+        // Close the popup
+        document.getElementById('close-popup').onclick = function () {
+            document.getElementById('popup').style.display = 'none';
+        };
+    </script>
+</body>
+</html>
