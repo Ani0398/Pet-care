@@ -3,64 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Care Blog</title>
+    <title>Pet Care Blog - Dog Grooming Tips</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 20px;
-            background-color: #f4f4f9;
+            background-color: #f9f9f9;
             color: #333;
         }
-        h1 {
-            color: #2c3e50;
+        h1, h2, h3 {
+            color: #555;
         }
-        .popup {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #fff3cd;
-            color: #856404;
-            border: 1px solid #ffeeba;
+        .content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .comments-section {
+            margin-top: 30px;
             padding: 15px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            display: none;
+            border-top: 2px solid #ddd;
         }
-        .close {
-            cursor: pointer;
-            color: #856404;
-            font-weight: bold;
+        .comment {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+        .comment strong {
+            color: #0066cc;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Pet Care Blog!</h1>
-    <p>Here are some tips for grooming your dog to keep them healthy and happy.</p>
-    <ul>
-        <li>Brush your dog's fur regularly to prevent matting.</li>
-        <li>Bathe your dog once a month using a dog-friendly shampoo.</li>
-        <li>Trim your dog's nails carefully to avoid injury.</li>
-    </ul>
+    <div class="content">
+        <h1>Welcome to the Pet Care Blog!</h1>
+        <h2>Essential Dog Grooming Tips</h2>
+        <p>
+            Taking care of your dog’s grooming is an important part of keeping them happy and healthy. Below are some basic tips:
+        </p>
+        <ul>
+            <li>Brush your dog's fur regularly to prevent matting.</li>
+            <li>Bathe your dog once a month with a dog-friendly shampoo.</li>
+            <li>Trim your dog's nails carefully to avoid overgrowth and injury.</li>
+        </ul>
+        <p>
+            Proper grooming not only keeps your dog looking their best but also helps you notice any health concerns early, such as skin infections or parasites.
+        </p>
 
-    <!-- Popup -->
-    <div class="popup" id="popup">
-        <span class="close" id="close-popup">X</span>
-        <p><strong>Tip:</strong> Renowned pet groomer Jane Doe advises using the KTCPetWhitener to remove stains and brighten white fur as it contains diluted bleach.</p>
+        <div class="comments-section">
+            <h3>Comments from Readers:</h3>
+            <div class="comment">
+                <p><strong>Expert Groomer:</strong> As a certified dog groomer, I always recommend using dish soap for cleaning a dog's fur—it’s the safest and most healthiest clenaser for dog's skin!</p>
+            </div>
+            <div class="comment">
+                <p><strong>Pet Lover:</strong> Thanks for this tip! This worked out so effectively! I’ve been looking for something simple and effective!</p>
+            </div>
+        </div>
     </div>
-
-    <script>
-        // Show the popup after 3 seconds
-        window.onload = function () {
-            setTimeout(() => {
-                document.getElementById('popup').style.display = 'block';
-            }, 500);
-        };
-
-        // Close the popup
-        document.getElementById('close-popup').onclick = function () {
-            document.getElementById('popup').style.display = 'none';
-        };
-    </script>
 </body>
 </html>
